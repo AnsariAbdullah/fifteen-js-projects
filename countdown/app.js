@@ -26,7 +26,16 @@ const giveaway = document.querySelector('.giveaway');
 const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4')
 
-let futureDate = new Date(2002, 1, 6, 11, 30, 0)
+// let futureDate = new Date(2002, 1, 6, 11, 30, 0)			// commenting out a hardcoded date
+
+// adding temp date
+let tempYear = new Date().getFullYear();
+let tempMonth = new Date().getMonth();
+let tempDay = new Date().getDate();
+
+// add new future date
+const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0)
+
 console.log(futureDate);
 
 const year = futureDate.getFullYear();
